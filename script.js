@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 'Cache-Control': 'no-cache',
                 'Ocp-Apim-Subscription-Key': 'fe69ad2a7d6e49c4967ec62c89cadc15',
             },
-            mode: 'no-cors' // Set mode to 'cors' to allow CORS
+            mode: 'cors' // Set mode to 'cors' to allow CORS
         })
         .then(response => {
             // Check if response is OK (status code 200)
