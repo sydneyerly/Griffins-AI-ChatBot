@@ -65,14 +65,20 @@ document.addEventListener("DOMContentLoaded", () => {
             },
             mode: 'cors' // Set mode to 'cors' to allow CORS
         })
-        .then(response => {
-            // Check if response is OK (status code 200)
-            if (response.ok) {
-                return response.json(); // Parse JSON response
-            } else {
-                throw new Error('Network response was not ok');
-            }
-        })
+     .then(response => {
+    // Log the response status
+    console.log('Response status:', response.status);
+
+    // Check if response is OK (status code 200)
+    if (response.ok) {
+        return response.json(); // Parse JSON response
+    } else {
+        // Log the error message
+        console.error('Error message:', response.statusText);
+        throw new Error('Network response was not ok');
+    }
+})
+
         .then(data => {
             const botResponse = data && data.results && data.results[0];
             if (botResponse) {
