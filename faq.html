@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="griffin icon.png" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Griffins AI ChatBot</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            color: white; 
+        }
+        body {
+            background-color: black;
+            background: rgb(2,0,70);
+            background: linear-gradient(0deg, rgba(2,0,70,1) 3%, rgba(124,0,79,1) 5%, rgba(162,56,255,1) 16%, rgba(0,0,0,1) 20%);
+            padding-top: 100px;
+           
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between; 
+            padding: 10px 50px; 
+            z-index: 1000;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo img {
+            width: 100px;
+            height: 100px;
+        }
+        .logo-text {
+            font-size: 24px;
+        }
+        .nav-links {
+            display: flex;
+            justify-content: flex-end; 
+            
+        }
+        .nav-links a {
+            margin-left: 30px; 
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 4px 30px;
+            transition: all 0.3s ease;
+        }
+        .nav-links a#login {
+            color: white;
+            border: 2px solid white;
+           margin: 0 10px;
+            border-radius: 27px;
+            border: 2px solid white;
+
+        }
+        .nav-links a#signup {
+
+            border-radius: 27px ;
+            background-color: #A238FF;
+            margin: 0 10px;     
+            
+        }
+        .nav-links a:hover {
+            transform: scale(1.1);
+        }
+
+        section {
+            padding-top: 100px;
+            position: relative;
+            min-height: 100vh;
+            width:80%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .title{
+            font-size: 3rem;
+            margin: 2rem orem;;  
+        }
+
+        .faq{
+            position: sticky;
+            top: 10;
+            max-width: 700px;
+            margin-top: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid white;
+            cursor:pointer;
+            max-height: calc(100vh - 100px);
+          
+        }
+
+        .question{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .question h3{
+            font-size: 16;
+        }
+
+        .answer{
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 1.4s ease;
+        }
+
+        .answer p{
+            padding-top: 1rem;
+            line-height: 1.3;
+            font-size: 14;
+        }
+
+        ul {
+            padding-left: 30px; 
+        }
+
+        .faq.active .answer{
+            max-height: 300px;
+            animation:fade 1s ease-in-out;
+        }
+
+        .faq.active svg{
+            transform: rotate(180deg);
+        }
+        svg{
+            transition:transform .5s ease-in;
+        }
+
+        @keyframes fade {
+            from{
+                opacity:0;
+                transform: translateY(-10px);
+            }
+            to{
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+
+       
+    </style>
+</head>
+
+    <body>
+        <header>
+            <div class="logo">
+                <img src="griffin logo.png" alt="GRIFFIN" width="100" height="100">
+                <div class="logo-text">GRIFFINS</div>
+            </div>
+            <div class="nav-links">
+                <a id="faq" href="faq.html">FAQ</a>
+                <a id="login" href="signup.html">LOG IN</a>
+                <a id="signup" href="signup.html">SIGN UP</a>
+            </div>
+        </header>
+
+    
+        <section>
+           <h2 class="title"> Frequently Asked Questions </h2>
+           
+          <div class="faq">
+            <div class="question">
+                <h3> What is Griffins ? </h3>
+                <svg width="15" height="10" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="answer">
+                <p> 
+                    <b>Collaborating with Reena</b><br>
+                    The Reena Developers site offers APIs to external companies and developers, facilitating implementation using a variety of technologies developed by Reena. <br>
+
+                    <br><b>How Griffins Works</b><br>
+                   <br>Griffin operates by leveraging large language models like the Reena AI Model to respond to user prompts with information it has learned. 
+                   However, it's crucial to remember that Griffin isn't human; it lacks independent thought or emotions and can't replace human relationships or professionals. 
+                   While it can provide assistance, it's not a substitute for human interaction or personal responsibility.
+
+                </p>
+            </div>
+
+          </div>
+
+          <div class="faq">
+            <div class="question">
+                <h3> Why can Griffin get things wrong  ? </h3>
+                <svg width="15" height="10" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="answer">
+                <p> 
+                    Generative AI and all of its possibilities are exciting, but it’s still new. Griffin will make mistakes. 
+                    Even though it’s getting better every day, Griffin can provide inaccurate information, or it can even make offensive statements.
+                    <br>
+                   <br> <b>Be mindful of how you use Griffins</b><br>
+                    <br>You have an opportunity to shape Griffin for others. Griffin will use the conversations you have to improve future responses for everyone 
+                    so don’t enter anything you wouldn’t want a reviewer to see or Google to use.
+                </p>
+            </div>
+          </div>
+
+          <div class="faq">
+            <div class="question">
+                <h3> Can Griffin help with coding ? </h3>
+                <svg width="15" height="10" viewBox="0 0 42 25">
+                    <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="answer">
+                <p> 
+                   <b>Nope,</b> Griffins cannot help with coding or topics about coding.
+                    You are responsible for finding coding assistance elsewhere and should exercise caution and careful review of all code for errors, bugs, and vulnerabilities before relying on it. 
+                    Code may also be subject to an open-source license, and Griffin provides related information.
+                </p>
+            </div>
+          </div>
+
+        </section>
+
+        <script>
+            const faqs = document.querySelectorAll(".faq");
+            faqs.forEach(faq => {
+                faq.addEventListener("click", () => {
+                    faq.classList.toggle("active");
+                });
+            });
+        </script>
+
+
+ 
+</body>
+</html>
